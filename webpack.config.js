@@ -6,7 +6,9 @@ module.exports = {
   },
   module: {
     loaders: [
-      { test: /\.js$/, loader: "babel-loader", exclude: /node_modules/ }
+      { test: /\.js$/, loader: "babel-loader", exclude: /node_modules/ },
+      { test: /\.sass$/, loader: "style!css!sass?indentedSyntax"},
+      { test: /\.jpg$/, loader: 'url-loader?limit=100000' }
     ]
   }
 };
